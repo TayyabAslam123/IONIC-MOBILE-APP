@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+
+    <ion-item button detail lines="inset" *ngFor="let item of (campaigns | async)" (click)="openDetails(campaign)">
+       <div>
+   <h1>{{item.title}}</h1>  
+   <p>{{item.body}}</p>
+
+  <h3 style="color:red;">AMOUNT REQUIRED: RS {{item.amount_req}}</h3>
+  <h3 style="color: green;">AMOUNT RAISED:RS {{item.amount_raised}}</h3>
+
+  <a href="/campaign-detail">
+    <ion-button expand="block">DONATE</ion-button>
+  </a>   
+    </div>
+ <br>
+    <hr>
+
+    </ion-item>
+  </ion-list>
+
+  
+<!--
+<ion-list>
+
+  <ion-item button detail lines="inset" *ngFor="let item of (campaigns | async)" (click)="openDetails(campaign)">
+     <div>
+ <h3>{{item.name}}</h3>  
+ <p>{{item.body}}</p>
+
+
+ <ion-button size="medium" (click)='lolo(item.id);' expand="block">VIEW</ion-button>
+			
+
+
+  </div>
+<br>
+  <hr>
+
+  </ion-item>
+</ion-list>  
+
+-->
+
+
+<!--
+  <ion-grid>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div text-center>
+					<h4>Data idhar se send karsi</h4>
+				</div>
+				<div padding>
+					<ion-item>
+						<ion-input [(ngModel)]="name" name="name" type="text" placeholder="Name" >
+						</ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-input [(ngModel)]="body" name="body" type="text" placeholder="Body">
+						</ion-input>
+					</ion-item>
+				</div>
+				<div padding>
+					<ion-button size="medium" (click)='dataSendKarsi(name, body);' expand="block">Login</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+  </ion-grid>
+
+  
+  
+
+-->
+  
+  
+
+  <!--
+<div>
+  <input type="txt" placeholder="name" [(ngModel)]="name"/>
+  <input type="txt" placeholder="body" [(ngModel)]="body"/>
+  <br>
+  <button ion-button full (click)="sendPostRequest()">INSERT</button>
+  
+</div>
+
+-->
+
+
+</ion-content>

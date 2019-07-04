@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div text-center>
+    <h1 style="background-color: orange;">ALL REGISTERED NGOS</h1>
+  </div>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let item of (ngos | async)" >
+     
+    
+      <div >
+
+         
+   <h3 style="color:orange;">{{item.name}}</h3> 
+
+   <h6>{{item.details}}</h6> 
+   
+  </div>
+    <br>
+    <hr>
+
+    </ion-item>
+  </ion-list>
+
+
+<div text-center>
+  <h3>REGISTER YOUR CAMPAIGN</h3>
+</div>
+<ion-grid>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div text-center>
+					<h5>KINDLY ENTER THE DETAILS</h5>
+				</div>
+				<div padding>
+					<ion-item>
+						<ion-input [(ngModel)]="name" name="name" type="text" placeholder="Name" >
+						</ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-input [(ngModel)]="body" name="body" type="text" placeholder="Body">
+						</ion-input>
+					</ion-item>
+				</div>
+				<div padding>
+					<ion-button size="medium" (click)='dataSendKarsi(name, body);' expand="block">Login</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+  </ion-grid>
+</ion-content>

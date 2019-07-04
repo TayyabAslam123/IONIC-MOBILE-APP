@@ -1,0 +1,73 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				
+				<div text-center>
+					<h1 style="background-color: orange;"> CONTACT US</h1>
+				</div>
+
+				<div >
+					<h2 style="color: orange;">PHONE NUMBER</h2>
+					<h2>+923314275398</h2>
+					</div>
+
+					<div>
+						<h2 style="color: orange;">EMAIL</h2>
+						<h2>goodwill@gmail.com</h2>
+						</div>
+
+						<div text-center>
+							<h2 style="background-color: orange;">FEEL FREE TO CONTACT</h2>
+						</div>
+		
+
+				<div padding>
+
+					<ion-item>
+						<ion-input [(ngModel)]="name" name="name" type="text" placeholder="Name" >
+						</ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-input [(ngModel)]="email" name="email" type="text" placeholder="EMAIL">
+						</ion-input>
+          </ion-item>
+          
+          <ion-item>
+              <ion-input [(ngModel)]="subject" name="subject" type="text" placeholder="SUBJECT" >
+              </ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-input [(ngModel)]="message" name="message" type="text" placeholder="MESSAGE">
+              </ion-input>
+            </ion-item>
+
+
+
+				</div>
+				<div padding>
+					<ion-button size="medium" (click)='dataSendKarsi(name, email, subject, message);' expand="block">SUBMIT</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+  </ion-grid>
+
+
+	<a href="/home">
+		<ion-button expand="block">Go back</ion-button>
+	</a>
+</ion-content>
